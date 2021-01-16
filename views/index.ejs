@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<form method="POST" action="/ekle" id="myDIV" class="header">
+  <h2 style="margin:5px">My To Do List</h2>
+  <input name="todo" type="text" id="myInput" placeholder="Title...">
+  <button type="submit"  class="addBtn">Add</button>
+</form>
+<ul id="myUL">
+    <% for( let i = 0; i < allTodo.length; i++ ) { %>
+        <li><%= allTodo[i].todo_name %> </li>
+    <% } %>
+</ul>
+<script src="./app.js"></script>
+</body>
+</html>
